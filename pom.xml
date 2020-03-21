@@ -1,0 +1,54 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.boot.demo</groupId>
+  <artifactId>om-parent</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  
+  	<properties>
+  		<dubbo.version>2.7.1</dubbo.version>
+  		<curator.version>4.2.0</curator.version>
+  	</properties>
+  
+  <dependencyManagement>
+  	<dependencies>
+		<dependency>
+			<!-- Import dependency management from Spring Boot -->
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-dependencies</artifactId>
+			<version>2.1.5.RELEASE</version>
+			<type>pom</type>
+			<scope>import</scope>
+		</dependency>
+	    <!-- Dubbo启动器 -->
+	    <dependency>
+	        <groupId>org.apache.dubbo</groupId>
+	        <artifactId>dubbo-spring-boot-starter</artifactId>
+	        <version>${dubbo.version}</version>
+	    </dependency>
+	    <dependency>
+	        <groupId>org.apache.dubbo</groupId>
+	        <artifactId>dubbo</artifactId>
+	        <version>${dubbo.version}</version>
+	    </dependency>
+	    <dependency>
+		    <groupId>org.apache.curator</groupId>
+		    <artifactId>curator-framework</artifactId>
+	        <version>${curator.version}</version>
+		</dependency>
+		<dependency>
+            <groupId>org.apache.curator</groupId>
+            <artifactId>curator-recipes</artifactId>
+	        <version>${curator.version}</version>
+        </dependency>
+  	</dependencies>
+  </dependencyManagement>
+  
+  <dependencies>
+  </dependencies>
+  
+  <modules>
+  	<module>om-main</module>
+  	<module>om-common</module>
+  </modules>
+</project>

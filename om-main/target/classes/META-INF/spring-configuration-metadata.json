@@ -1,0 +1,12 @@
+{
+  "groups": [
+    {
+      "name": "spring.datasource.druid",
+      "type": "javax.sql.DataSource",
+      "sourceType": "com.boot.demo.config.DruidConfig",
+      "sourceMethod": "public javax.sql.DataSource getDruidDataSource() "
+    }
+  ],
+  "properties": [],
+  "hints": []
+}
